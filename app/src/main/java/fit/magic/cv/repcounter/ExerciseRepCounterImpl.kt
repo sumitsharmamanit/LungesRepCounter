@@ -1,19 +1,5 @@
 // Copyright (c) 2024 Magic Tech Ltd
 
-//No Pose Detected: The system handles the case when no pose is detected by sending a feedback message.
-//No Landmarks Detected: Checks if landmarks are present, and if not, sends a feedback message.
-//Insufficient Landmarks: Validates that the number of detected landmarks is sufficient before proceeding.
-//Standing Position: Handles detection of a standing position, ensuring minor knee bends are not counted as lunges by using a vertical distance threshold.
-//Going Down: Detects the transition from standing to going down into a lunge, based on the knee angle and the bend in the other knee.
-//Lunge Bottom: Identifies when the person reaches the bottom of the lunge, ensuring proper knee angles and vertical distance between knees.
-//Going Up: Detects the transition from the lunge bottom back to standing.
-//Rep Counting: Counts a rep only when transitioning from going down to the lunge bottom, ensuring cooldown and preventing double counting for the same leg.
-//Progress Calculation and Smoothing: Calculates the progress of the lunge and applies smoothing to handle fluctuations.
-//Feedback on Depth Discrepancy: Provides feedback if there is a significant discrepancy in lunge depth between left and right legs.
-//Single Leg Knee Bends: Tackles the pose of single leg knee bends, which can be mistaken for lunges, based on the knee bend and vertical distance between knees.
-//Holding Lunge Bottom Position: Ensures that holding the lunge bottom position does not increment the rep counter until the transition to the standing position is completed.
-
-
 package fit.magic.cv.repcounter
 
 import fit.magic.cv.PoseLandmarkerHelper
