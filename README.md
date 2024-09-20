@@ -1,1 +1,5 @@
-# Magic Tech - Data scientist assessment - Starter code
+# Alternate Lunges Rep Counter Assessment
+
+
+
+
